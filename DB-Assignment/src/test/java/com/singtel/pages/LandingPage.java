@@ -168,8 +168,8 @@ public class LandingPage {
 		Website.click();
 		Thread.sleep(2000);
 		Website.clear();
-		
-		//Website.sendKeys(Keys.CONTROL + "A" + Keys.BACK_SPACE);
+
+		// Website.sendKeys(Keys.CONTROL + "A" + Keys.BACK_SPACE);
 		Website.sendKeys(website);
 		Thread.sleep(1000);
 
@@ -198,6 +198,96 @@ public class LandingPage {
 		Assert.assertEquals(bio, actualBio);
 		Assert.assertEquals(location, actualLocation);
 		Assert.assertEquals(password, actualUrl);
+	}
+
+	public void retrieveTheTweets(String search) throws InterruptedException {
+
+		// driver.findElement(By.xpath("//input[@aria-label='Search query']")).
+
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			WebElement Website;
+			Website = wait.until(
+					ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@aria-label='Search query']")));
+			Website.click();
+			Thread.sleep(2000);
+			Website.clear();
+			Website.sendKeys(search);
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//div[@data-testid='TypeaheadUser']//span[text()='The Times Of India']"))
+					.click();
+
+			int i = 1;
+			while (true) {
+
+				System.out.println("i chi value ++++++++=============" + i);
+				String timeXpth = "//*[@id=\"react-root\"]/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div/section/div/div/div["
+						+ i + "]/div/div/article/div/div/div/div[2]/div[2]/div[1]/div/div/div[1]/a/time";
+				Thread.sleep(3000);
+
+				JavascriptExecutor je = (JavascriptExecutor) driver;
+				je.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath(timeXpth)));
+				Thread.sleep(3000);
+				// je.executeScript("window.scrollBy(0,350)", "");
+				String timeXpath = driver.findElement(By.xpath(timeXpth)).getText();
+
+				System.out.println(timeXpath);
+
+				if (timeXpath.contains("s") || timeXpath.contains("m") || timeXpath.equals("1h")) {
+					String contentXpath = "//*[@id=\"react-root\"]/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div/section/div/div/div["
+							+ i + "]/div/div/article/div/div/div/div[2]/div[2]/div[2]/div[1]";
+					String content = driver.findElement(By.xpath(contentXpath)).getText();
+
+					// Step h
+					printTweetInChunk(content);
+
+					System.out.println(
+							"*******************************************************************************************************************************************************************************");
+
+				} else {
+					System.out.println("Break hot aahe ==== " + timeXpath);
+					break;
+				}
+				i++;
+			}
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public static void printTweetInChunk(String content) {
+		char[] ch = content.toCharArray();
+		if (ch.length > 50) {
+			float f = ch.length / 50;
+			int remainder = ch.length % 50;
+			System.out.println("sdad = " + remainder);
+			int temp = Math.round(f);
+			System.out.println(temp);
+
+			int t = 0;
+			for (int z = 0; z < temp; z++) {
+				int y = 50 + t;
+				System.out.println(z + 1 + " Chunk of data ");
+				while (t < y) {
+					System.out.print(ch[t]);
+					t++;
+
+				}
+				System.out.println();
+
+			}
+			if (remainder != 0) {
+				System.out.println(temp + 1 + " Chunk of data ");
+
+				System.out.println();
+				for (int k = t; k < ch.length; k++) {
+					System.out.print(ch[k]);
+				}
+
+			}
+
+		}
 	}
 
 }

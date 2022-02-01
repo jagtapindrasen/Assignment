@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="21.45161">
-    <testcase classname="Manage todo list as a todoMVC user" name="Update website field" time="21.45161">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="71.600914">
+    <testcase classname="Manage todo list as a todoMVC user" name="Retrieve the tweets" time="71.600914">
         <system-out>
             <![CDATA[Given I am on twitter login page............................................passed
-When I login with username "8087688615" and password "Indrasen@123".........passed
+When I login with username "8087688615" and password "Indrasen@1204"........passed
 Then I expect user to be navigated to home page.............................passed
-When user Update website filed in profile section as "twitter.com1".........passed
+When user open the twitter page of "The Times of India".....................passed
 ]]>
         </system-out>
     </testcase>

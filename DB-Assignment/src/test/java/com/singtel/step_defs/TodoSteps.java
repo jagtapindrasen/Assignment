@@ -51,14 +51,19 @@ public class TodoSteps {
 //		 dpLandingPage.userEntersLocationOnProfilePage(location);
 //	 }
 //	 
-	 @When("user Update website filed in profile section as {string}")
-	 public void userEnterswebsite(String website) throws InterruptedException {
-		 dpLandingPage.userEntersWebsiteOnProfilePage(website);
-	 }
+//	 @When("user Update website filed in profile section as {string}")
+//	 public void userEnterswebsite(String website) throws InterruptedException {
+//		 dpLandingPage.userEntersWebsiteOnProfilePage(website);
+//	 }
 
 //	 @When("user Fetch BIO {string} and location {string} and website {string} and check if the submit values got updated")
 //	 public void fetchAndVerifyUserDetails(String bio, String location, String password) throws Throwable {
 //		dpLandingPage.fetchAndVerifyUserDetails(bio, location, password);
 //	 }
+	
+	 @When("user open the twitter page of {string}")
+	 public void retrieveTheTweets(String search) throws InterruptedException {
+		 dpLandingPage.retrieveTheTweets(search);
+	 }
 	
 }

@@ -23,7 +23,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I login with username \"8087688615\" and password \"Indrasen@123\"",
+  "name": "I login with username \"8087688615\" and password \"Indrasen@1204\"",
   "keyword": "When "
 });
 formatter.match({
@@ -43,16 +43,16 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Update website field",
+  "name": "Retrieve the tweets",
   "description": "",
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "user Update website filed in profile section as \"twitter.com1\"",
+  "name": "user open the twitter page of \"The Times of India\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "TodoSteps.userEnterswebsite(String)"
+  "location": "TodoSteps.retrieveTheTweets(String)"
 });
 formatter.result({
   "status": "passed"

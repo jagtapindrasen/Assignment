@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1622535199,
+              "duration": 1695575700,
               "status": "passed"
             },
             "line": 4,
@@ -23,11 +23,11 @@
           },
           {
             "result": {
-              "duration": 8110858801,
+              "duration": 19052076001,
               "status": "passed"
             },
             "line": 5,
-            "name": "I login with username \"8087688615\" and password \"Indrasen@123\"",
+            "name": "I login with username \"8087688615\" and password \"Indrasen@1204\"",
             "match": {
               "arguments": [
                 {
@@ -35,7 +35,7 @@
                   "offset": 22
                 },
                 {
-                  "val": "\"Indrasen@123\"",
+                  "val": "\"Indrasen@1204\"",
                   "offset": 48
                 }
               ],
@@ -45,7 +45,7 @@
           },
           {
             "result": {
-              "duration": 16123900,
+              "duration": 20057400,
               "status": "passed"
             },
             "line": 6,
@@ -61,7 +61,7 @@
         "before": [
           {
             "result": {
-              "duration": 3090809499,
+              "duration": 2647008000,
               "status": "passed"
             },
             "match": {
@@ -69,14 +69,14 @@
             }
           }
         ],
-        "line": 17,
-        "name": "Update website field",
+        "line": 23,
+        "name": "Retrieve the tweets",
         "description": "",
-        "id": "manage-todo-list-as-a-todomvc-user;update-website-field",
+        "id": "manage-todo-list-as-a-todomvc-user;retrieve-the-tweets",
         "after": [
           {
             "result": {
-              "duration": 1342761499,
+              "duration": 905500201,
               "status": "passed"
             },
             "match": {
@@ -89,19 +89,19 @@
         "steps": [
           {
             "result": {
-              "duration": 7265186500,
+              "duration": 47270567901,
               "status": "passed"
             },
-            "line": 18,
-            "name": "user Update website filed in profile section as \"twitter.com1\"",
+            "line": 24,
+            "name": "user open the twitter page of \"The Times of India\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"twitter.com1\"",
-                  "offset": 48
+                  "val": "\"The Times of India\"",
+                  "offset": 30
                 }
               ],
-              "location": "TodoSteps.userEnterswebsite(String)"
+              "location": "TodoSteps.retrieveTheTweets(String)"
             },
             "keyword": "When "
           }
