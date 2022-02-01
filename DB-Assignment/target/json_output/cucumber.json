@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1781637000,
+              "duration": 1622535199,
               "status": "passed"
             },
             "line": 4,
@@ -20,45 +20,13 @@
               "location": "TodoSteps.redirect_ToLandingPage()"
             },
             "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "before": [
+          },
           {
             "result": {
-              "duration": 2481975300,
+              "duration": 8110858801,
               "status": "passed"
             },
-            "match": {
-              "location": "AbstractBase.Setup()"
-            }
-          }
-        ],
-        "line": 6,
-        "name": "Login Process",
-        "description": "",
-        "id": "manage-todo-list-as-a-todomvc-user;login-process",
-        "after": [
-          {
-            "result": {
-              "duration": 874209001,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AbstractBase.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3512450000,
-              "status": "passed"
-            },
-            "line": 7,
+            "line": 5,
             "name": "I login with username \"8087688615\" and password \"Indrasen@123\"",
             "match": {
               "arguments": [
@@ -72,6 +40,68 @@
                 }
               ],
               "location": "TodoSteps.login(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16123900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I expect user to be navigated to home page",
+            "match": {
+              "location": "TodoSteps.verifyLogin()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3090809499,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.Setup()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Update website field",
+        "description": "",
+        "id": "manage-todo-list-as-a-todomvc-user;update-website-field",
+        "after": [
+          {
+            "result": {
+              "duration": 1342761499,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7265186500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user Update website filed in profile section as \"twitter.com1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"twitter.com1\"",
+                  "offset": 48
+                }
+              ],
+              "location": "TodoSteps.userEnterswebsite(String)"
             },
             "keyword": "When "
           }

@@ -1,5 +1,10 @@
 package com.singtel.step_defs;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 //import org.openqa.selenium.WebDriver;  
 //import com.singtel.pages.Common;
 import com.singtel.pages.LandingPage;
@@ -25,6 +30,35 @@ public class TodoSteps {
 	public void login(String username, String password) {
 		dpLandingPage.login(username, password);
 	}
+	
+	@Then("I expect user to be navigated to home page")
+	public void verifyLogin() {
+		dpLandingPage.verifyLogin();
+	}
+	
+//	@When("^Navigate profile page of logged user and upload a profile picture$")
+//	 public void userUploadProfilePicture() throws Throwable {
+//		dpLandingPage.userUploadProfilePicture();
+//	 }
+//	
+//	 @When("user Update BIO field in profile section as {string}")
+//	 public void userEntersBio(String bio) throws InterruptedException {
+//		 dpLandingPage.userEntersBioOnProfilePage(bio);
+//	 }
+//	 
+//	 @When("user Update Location field in profile section as {string}")
+//	 public void userEntersLocation(String location) throws InterruptedException {
+//		 dpLandingPage.userEntersLocationOnProfilePage(location);
+//	 }
+//	 
+	 @When("user Update website filed in profile section as {string}")
+	 public void userEnterswebsite(String website) throws InterruptedException {
+		 dpLandingPage.userEntersWebsiteOnProfilePage(website);
+	 }
 
+//	 @When("user Fetch BIO {string} and location {string} and website {string} and check if the submit values got updated")
+//	 public void fetchAndVerifyUserDetails(String bio, String location, String password) throws Throwable {
+//		dpLandingPage.fetchAndVerifyUserDetails(bio, location, password);
+//	 }
 	
 }

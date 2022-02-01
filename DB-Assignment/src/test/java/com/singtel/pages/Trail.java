@@ -11,6 +11,8 @@ public class Trail {
 		WebDriver d= new ChromeDriver();
 		d.get("https://twitter.com/");
 		Thread.sleep(3000);
+		
+		
 	}
 
 }
