@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="8.655188">
+    <testcase classname="Manage todo list as a todoMVC user" name="Login Process" time="8.655188">
+        <system-out>
+            <![CDATA[Given I am on twitter login page............................................passed
+When I login with username "8087688615" and password "Indrasen@123".........passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

@@ -1,0 +1,6 @@
+com\singtel\pages\Common.class
+com\singtel\pages\LandingPage.class
+com\singtel\step_defs\AbstractBase.class
+com\singtel\test_runner\TestRunner.class
+com\singtel\elements\LandingPageElements.class
+com\singtel\step_defs\TodoSteps.class

@@ -1,0 +1,88 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1781637000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on twitter login page",
+            "match": {
+              "location": "TodoSteps.redirect_ToLandingPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2481975300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.Setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Login Process",
+        "description": "",
+        "id": "manage-todo-list-as-a-todomvc-user;login-process",
+        "after": [
+          {
+            "result": {
+              "duration": 874209001,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3512450000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I login with username \"8087688615\" and password \"Indrasen@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"8087688615\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Indrasen@123\"",
+                  "offset": 48
+                }
+              ],
+              "location": "TodoSteps.login(String,String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "Manage todo list as a todoMVC user",
+    "description": "",
+    "id": "manage-todo-list-as-a-todomvc-user",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/singtel/features/todos.feature",
+    "tags": []
+  }
+]
